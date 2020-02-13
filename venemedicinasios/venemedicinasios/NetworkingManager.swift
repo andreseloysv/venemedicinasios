@@ -19,10 +19,12 @@ class NetworkingManager: ObservableObject {
     }
     init() {
         guard let url = URL(string: "https://venemedicinasserver.herokuapp.com/getMedicin.php?name=atamel%20porlamar") else { return }
-        URLSession.shared.dataTask(with: url) {
-            (data, _, _) in
+        
+        URLSession.shared.dataTask(with: url) { (data, _, _) in
             guard let data = data else { return }
+            
             let venemedicinasList = try! JSONDecoder().decode([VenemedicinasListEntry].self, from: data)
+            
             DispatchQueue.main.async {
                 self.venemedicinasList = venemedicinasList
             }

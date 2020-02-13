@@ -23,20 +23,20 @@
 */
 import Foundation
 
-struct VenemedicinasApiList: Decodable {
+struct VenemedicinasApiList: Codable {
     var result: [VenemedicinasListEntry]
 }
 
-struct VenemedicinasListEntry: Decodable {
-    var Id: String
+struct VenemedicinasListEntry: Codable {
+    var Id: Int
     var ActiveIngredient: String
     var Description: String
     var variant: [Variant]
 }
 
-struct Variant: Decodable {
+struct Variant: Codable {
     var direccion: String
     var Name: String
-    var Availability: String
+    var Availability: Int
     var City: String
 }

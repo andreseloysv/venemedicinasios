@@ -6,7 +6,7 @@
 //  Copyright © 2020 venemedicinas. All rights reserved.
 //
 /*
-[
+ [
  {
  "Id":111243559,
  "ActiveIngredient":"Acetaminofen Elter 650 mg x 10 Tabletas",
@@ -19,24 +19,47 @@
  "City":"Porlamar"}
  ]
  }
-]
-*/
+ ]
+ */
+/*
 import Foundation
 
-struct VenemedicinasApiList: Codable {
-    var result: [VenemedicinasListEntry]
+struct MedicamentResponse: Decodable {
+    var venemedicinasList: [VenemedicinasListEntry]
+    
+    init(from decoder: Decoder) throws{
+        var venemedicinasList = [VenemedicinasListEntry]()
+        var container = try decoder.unkeyedContainer()
+        while !container.isAtEnd {
+            if let route = try? container.decode(VenemedicinasListEntry.self){
+                venemedicinasList.append(route)
+            }else {
+                _ = try? container.decode(DummyData.self)
+            }
+        }
+        self.venemedicinasList = venemedicinasList
+    }
 }
 
-struct VenemedicinasListEntry: Codable {
+struct DummyData: Decodable{}
+
+struct VenemedicinasListEntry: Decodable {
     var Id: Int
     var ActiveIngredient: String
     var Description: String
     var variant: [Variant]
 }
 
-struct Variant: Codable {
+struct Variant: Decodable {
     var direccion: String
     var Name: String
     var Availability: Int
     var City: String
 }
+
+enum MedicamentError: Error {
+    case dataUnavailable
+    case cannotProccessData
+}
+
+*/

@@ -17,6 +17,11 @@
 		5B62A65523F341D7005DA1D5 /* venemedicinasiosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62A65423F341D7005DA1D5 /* venemedicinasiosUITests.swift */; };
 		5B62A66323F46E7F005DA1D5 /* VenemedicinasApiList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62A66223F46E7F005DA1D5 /* VenemedicinasApiList.swift */; };
 		5B62A66523F46FE6005DA1D5 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62A66423F46FE6005DA1D5 /* NetworkingManager.swift */; };
+		5BBEB99023F5F2B300951338 /* MedicamentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBEB98F23F5F2B300951338 /* MedicamentRequest.swift */; };
+		5BBEB99223F695FE00951338 /* MedicinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBEB99123F695FE00951338 /* MedicinModel.swift */; };
+		5BBEB99423F696AF00951338 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBEB99323F696AF00951338 /* Webservice.swift */; };
+		5BBEB99623F6EBE100951338 /* MedicamentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBEB99523F6EBE100951338 /* MedicamentDetail.swift */; };
+		5BBEB99823F6F3F000951338 /* MedicamentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBEB99723F6F3F000951338 /* MedicamentRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,11 @@
 		5B62A65623F341D7005DA1D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B62A66223F46E7F005DA1D5 /* VenemedicinasApiList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenemedicinasApiList.swift; sourceTree = "<group>"; };
 		5B62A66423F46FE6005DA1D5 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		5BBEB98F23F5F2B300951338 /* MedicamentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentRequest.swift; sourceTree = "<group>"; };
+		5BBEB99123F695FE00951338 /* MedicinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinModel.swift; sourceTree = "<group>"; };
+		5BBEB99323F696AF00951338 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		5BBEB99523F6EBE100951338 /* MedicamentDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentDetail.swift; sourceTree = "<group>"; };
+		5BBEB99723F6F3F000951338 /* MedicamentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +115,18 @@
 			children = (
 				5B62A63223F341D3005DA1D5 /* AppDelegate.swift */,
 				5B62A63423F341D3005DA1D5 /* SceneDelegate.swift */,
+				5BBEB99723F6F3F000951338 /* MedicamentRow.swift */,
 				5B62A63623F341D3005DA1D5 /* ContentView.swift */,
+				5BBEB99523F6EBE100951338 /* MedicamentDetail.swift */,
 				5B62A63823F341D6005DA1D5 /* Assets.xcassets */,
 				5B62A63D23F341D6005DA1D5 /* LaunchScreen.storyboard */,
 				5B62A64023F341D6005DA1D5 /* Info.plist */,
 				5B62A63A23F341D6005DA1D5 /* Preview Content */,
 				5B62A66223F46E7F005DA1D5 /* VenemedicinasApiList.swift */,
 				5B62A66423F46FE6005DA1D5 /* NetworkingManager.swift */,
+				5BBEB98F23F5F2B300951338 /* MedicamentRequest.swift */,
+				5BBEB99123F695FE00951338 /* MedicinModel.swift */,
+				5BBEB99323F696AF00951338 /* Webservice.swift */,
 			);
 			path = venemedicinasios;
 			sourceTree = "<group>";
@@ -273,9 +288,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BBEB99223F695FE00951338 /* MedicinModel.swift in Sources */,
 				5B62A63323F341D3005DA1D5 /* AppDelegate.swift in Sources */,
+				5BBEB99423F696AF00951338 /* Webservice.swift in Sources */,
+				5BBEB99823F6F3F000951338 /* MedicamentRow.swift in Sources */,
 				5B62A63523F341D3005DA1D5 /* SceneDelegate.swift in Sources */,
+				5BBEB99023F5F2B300951338 /* MedicamentRequest.swift in Sources */,
 				5B62A66323F46E7F005DA1D5 /* VenemedicinasApiList.swift in Sources */,
+				5BBEB99623F6EBE100951338 /* MedicamentDetail.swift in Sources */,
 				5B62A66523F46FE6005DA1D5 /* NetworkingManager.swift in Sources */,
 				5B62A63723F341D3005DA1D5 /* ContentView.swift in Sources */,
 			);

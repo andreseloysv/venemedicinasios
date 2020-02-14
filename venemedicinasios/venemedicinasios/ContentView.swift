@@ -9,33 +9,50 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var networkingManager = NetworkingManager()
-    
+    @State private var searchTerm: String = "Tim"
+    @ObservedObject private var postListVM = PostListViewModel()
     var body: some View {
-
-        /*ScrollView {
-
-            HStack(alignment: .top){
-                
-                VStack(alignment: .center){
-        
-                    Text("Venemedicinas")
-                    TextField("Atamel caracas", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                    Button(action: {}) {
-                        Text("Buscar")
-                    }*/
-                    List(networkingManager.venemedicinasList, id: \.self.Id) {
-                        medicamento in
+        NavigationView {
+            VStack {
+                HStack(alignment: .top){
+                    VStack(){
                         
-                        Text(medicamento.Description)
-                    }
-                    /*
+                        TextField("Atamel caracas", text: $searchTerm).padding(.vertical).padding(.leading)
+                        Button(action: {}) {
+                            Text("Buscar")
+                        }
+                        
+                        List(self.postListVM.posts, id: \.Id) { post in
+                            NavigationLink(destination:         VStack() {
+                                VStack(alignment: .leading) {
+                                    Text(post.Description)
+                                        .font(.title)
+                                    List(post.variant, id: \.Name) { variante in
+                                        VStack(alignment: .leading) {
+                                            Text(variante.Name).font(.subheadline)
+                                            Text(variante.direccion).font(.subheadline)
+                                            Spacer()
+                                        }
+                                    }
+                                }
+                                .padding()
+                                Spacer()
+                            }) {
+                                VStack(alignment: .leading) {
+                                    Text(post.Description).font(.title)
+                                    Text(post.ActiveIngredient)
+                                    Spacer()
+                                }
+                            }
+                        }
+                        
+                    }.navigationBarTitle(Text("Venemedicinas"), displayMode: .inline)
                 }
-                .padding(.leading)
             }
-        }*/
+        }
     }
 }
+
 #if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

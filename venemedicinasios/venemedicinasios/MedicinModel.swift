@@ -11,8 +11,8 @@ import Foundation
 class PostListViewModel: ObservableObject {
     @Published var posts = [PostViewModel]()
     
-    init() {
-        Webservice().getPosts() { posts in
+    func searchMedicament(searchTerm: String) {
+        Webservice().getPosts(searchTerm: searchTerm) { posts in
             
             if let posts = posts {
                 self.posts = posts.map(PostViewModel.init)
@@ -31,7 +31,7 @@ struct PostViewModel {
         self.post = post
     }
     
-    var Id: Int {
+    var Id: String {
         return self.post.Id
     }
     
@@ -50,14 +50,14 @@ struct PostViewModel {
 }
 
 struct Post: Codable {
-    let Id: Int
+    let Id: String
     let Description: String
     let ActiveIngredient: String
     let variant: [Variant]
 }
 
 struct Variant: Codable {
-    let Id: Int
+    let Id: String
     let direccion: String
     let Name: String
 }

@@ -10,17 +10,13 @@
 import SwiftUI
 
 struct MedicamentRow: View {
-    var post: Post
+    var post: PostViewModel
 
     var body: some View {
-        EmptyView()
-        /*
         VStack(alignment: .leading) {
-            EmptyView()
             Text(post.Description).font(.title)
             Text(post.ActiveIngredient)
-            //Spacer()
+            Spacer()
         }
- */
     }
 }

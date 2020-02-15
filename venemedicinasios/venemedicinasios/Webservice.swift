@@ -9,9 +9,9 @@
 import Foundation
 
 class Webservice {
-    func getPosts(completion: @escaping ([Post]?) -> ()) {
+    func getPosts(searchTerm: String,completion: @escaping ([Post]?) -> ()) {
         
-        guard let url = URL(string: "https://venemedicinasserver.herokuapp.com/getMedicin?name=atamel%20charallave") else {
+        guard let url = URL(string: "https://venemedicinasserver.herokuapp.com/getMedicin?name="+searchTerm) else {
             fatalError("Invalid URL")
         }
         

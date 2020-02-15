@@ -11,7 +11,7 @@
 import SwiftUI
 
 struct MedicamentDetail: View {
-    var post: Post
+    var post: PostViewModel
     
     var body: some View {
         VStack() {
@@ -31,10 +31,3 @@ struct MedicamentDetail: View {
         }
     }
 }
-/*
-struct MedicamentDetail_Preview: PreviewProvider {
-    static var previews: some View {
-        MedicamentDetail(medicament: <#Post#>)
-    }
-}
-*/
